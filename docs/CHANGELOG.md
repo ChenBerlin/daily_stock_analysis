@@ -10,6 +10,9 @@
 ### 变更
 - ⏰ 将默认定时任务执行时间从北京时间 18:00 调整为 16:00（时区保持 Asia/Shanghai 不变）
 
+### 修复
+- 🕯️ 修复邮件/完整仪表盘中 Price Action 小节缺失问题：补充 dashboard `data_perspective.price_action` 输出与展示
+
 ## [3.0.5] - 2026-02-08
 
 ### 修复
