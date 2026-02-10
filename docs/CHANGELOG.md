@@ -5,6 +5,11 @@
 格式基于 [Keep a Changelog](https://keepachangelog.com/zh-CN/1.0.0/)，
 版本号遵循 [Semantic Versioning](https://semver.org/lang/zh-CN/)。
 
+## [Unreleased]
+
+### 变更
+- ⏰ 将默认定时任务执行时间从北京时间 18:00 调整为 16:00（时区保持 Asia/Shanghai 不变）
+
 ## [3.0.5] - 2026-02-08
 
 ### 修复
