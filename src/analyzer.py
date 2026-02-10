@@ -392,6 +392,13 @@ class GeminiAnalyzer:
         },
 
         "data_perspective": {
+            "price_action": {
+                "market_structure": "趋势/盘整结构判断（如：上升趋势中的高低点抬升）",
+                "key_candle_signal": "关键K线信号（如：吞没、pin bar、突破K线）",
+                "breakout_quality": "突破有效性评估（有效突破/假突破/待确认）",
+                "pullback_signal": "回调质量与延续性（健康回踩/深度回撤/转弱）",
+                "actionable_view": "基于Price Action的可执行结论（买点/防守点/观望触发条件）"
+            },
             "trend_status": {
                 "ma_alignment": "均线排列状态描述",
                 "is_bullish": true/false,

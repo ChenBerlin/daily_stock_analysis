@@ -743,6 +743,7 @@ class NotificationService:
             # ========== 数据透视 ==========
             data_persp = dashboard.get('data_perspective', {}) if dashboard else {}
             if data_persp:
+                pa_data = data_persp.get('price_action', {})
                 trend_data = data_persp.get('trend_status', {})
                 price_data = data_persp.get('price_position', {})
                 vol_data = data_persp.get('volume_analysis', {})
@@ -752,6 +753,31 @@ class NotificationService:
                     "### 📊 数据透视",
                     "",
                 ])
+
+                # Price Action（Al Brooks）
+                if pa_data:
+                    report_lines.extend([
+                        "**🕯️ Price Action（Al Brooks）**",
+                        "",
+                    ])
+                    if pa_data.get('market_structure'):
+                        report_lines.append(f"- 结构: {pa_data.get('market_structure')}")
+                    if pa_data.get('key_candle_signal'):
+                        report_lines.append(f"- 关键信号K线: {pa_data.get('key_candle_signal')}")
+                    if pa_data.get('breakout_quality'):
+                        report_lines.append(f"- 突破质量: {pa_data.get('breakout_quality')}")
+                    if pa_data.get('pullback_signal'):
+                        report_lines.append(f"- 回调质量: {pa_data.get('pullback_signal')}")
+                    if pa_data.get('actionable_view'):
+                        report_lines.append(f"- 执行建议: {pa_data.get('actionable_view')}")
+                    report_lines.append("")
+                elif result.pattern_analysis:
+                    report_lines.extend([
+                        "**🕯️ Price Action（Al Brooks）**",
+                        "",
+                        f"- 关键信号K线: {result.pattern_analysis}",
+                        "",
+                    ])
                 
                 # 趋势状态
                 if trend_data:
